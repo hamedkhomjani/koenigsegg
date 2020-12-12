@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    background: #6D8695;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar {
+    height: 15%;
+    width: 90%;
+    /* clip-path: polygon(100% 0, 95% 50%, 50% 100%, 5% 50%, 0 0); */
+    position: relative;
+    top: 0;
+    left: 5%;
+    background: yellow;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.navlinks .navlinks2 {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navlinks a {
+    margin: 20px 60px 60px 60px;
+    text-decoration: none;
+    color: #0C161D;
+    transition: 0.5s;
+}
+
+.navlinks2 a {
+    margin: 60px;
+    text-decoration: none;
+    color: #0C161D;
+    transition: 0.5s;
+}
+
+.navlinks a:hover {
+    color: #95531E;
+}
+
+.navlinks2 a:hover {
+    color: #95531E;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.sideImg {
+    height: 500px;
+    width: 500px;
+    z-index: 999;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.sideImg img {
+    height: 600px;
+}
+
+.sideImg:hover img {
+    animation: animate 2s linear;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(0.60);
+    }
+    95% {
+        transform: scale(1.10);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.content {
+    height: 400px;
+    width: 750px;
+    position: absolute;
+    left: 5%;
+    top: calc(50% - 200px);
+}
+
+.content h1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 150px;
+    color: yellow;
+    font-weight: 900;
+}
+
+.content p {
+    padding: 0 0 25px 20px;
+}
+
+.content button {
+    height: 70px;
+    width: 200px;
+    border: none;
+    outline: none;
+    background: yellow;
+    cursor: pointer;
+    font-weight: 900;
+    transition: .4s;
+}
+
+.content button:hover {
+    transform: scale(1.1);
+    color: #95531E;
 }
